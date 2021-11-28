@@ -1,0 +1,59 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.hr.sapZHR_INFO15ZHCM_INFOTYPE15.controller.HR2"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="{i18n>title2}" showNavButton="true" navButtonPress="onNavBack" class="sapUiSizeCompact">
+		<content>
+			<Table id="idTable" inset="false" items="{/}" growing="true" growingThreshold="16" class="sapUiTinyMarginBeginEnd" mode="MultiSelect">
+				<headerToolbar>
+					<Toolbar>
+						<Button text="{i18n>addRow}" type="Accept" icon="sap-icon://add" press="onAdd"/>
+						<Button text="{i18n>delRow}" type="Reject" icon="sap-icon://delete" press="onDelete"/>
+						<ToolbarSpacer/>
+						<Button text="{i18n>impTab}" type="Emphasized" icon="sap-icon://upload" press="onImpTable"/>
+						<Button text="{i18n>expTab}" type="Emphasized" icon="sap-icon://download" class="sapUiLargeMarginEnd" press="onExpTable"/>
+						<Button text="{i18n>sav}" type="Accept" icon="sap-icon://save" class="sapUiLargeMarginEnd" press="onSave"/>
+					</Toolbar>
+				</headerToolbar>
+				<columns>
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Left" styleClass="cellBorderLeft" width="13em">
+						<Label text="{i18n>perNo}" design="Bold" class="txt"/>
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center" styleClass="cellBorderLeft cellBorderRight" width="12em">
+						<Label text="{i18n>name}" design="Bold"/>
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center" styleClass="cellBorderRight" width="13em">
+						<Label text="{i18n>dept}" design="Bold"/>
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center" width="6em" styleClass="cellBorderRight">
+						<Label text="{i18n>wagTyp}" design="Bold"/>
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center" width="6em" styleClass="cellBorderRight">
+						<Label text="{i18n>Amt}" design="Bold"/>
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center" styleClass="cellBorderRight" width="15em">
+						<Label text="{i18n>assignId}" design="Bold"/>
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Left" styleClass="cellBorderRight">
+						<Label text="{i18n>BegDat}" design="Bold"/>
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Left" styleClass="cellBorderRight">
+						<Label text="{i18n>EndDat}" design="Bold"/>
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<Input value="{PersonaalNumber}" id="idPersonaalNumberCell"/>
+							<Input value="{Name}" id="idNameCell"/>
+							<Input value="{Department}" id="idDepartmentCell"/>
+							<Input value="{WageType}" id="idWageTypeCell"/>
+							<Input value="{Amount}" id="idAmountCell"/>
+							<Input value="{Shift}" id="idShiftCell"/>
+							<Input value="{Begindate}" id="idBegindateCell"/>
+							<Input value="{Enddate}" id="idEnddateCell"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+		</content>
+	</Page>
+</mvc:View>
